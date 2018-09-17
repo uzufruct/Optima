@@ -46,4 +46,4 @@ end
 
 puts 'Word to check:'
 str = gets.chomp
-puts 'Is palindrome: ' + palin(str)
+puts 'Is palindrome: ' + palin(str.downcase)
