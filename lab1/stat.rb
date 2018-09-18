@@ -29,12 +29,18 @@ class Stat
       end
       sum / (@data.length - 1)
     end
+  end
 
-
-    end
+  def handler
+    begin
+      puts compute
+      puts 'Would you like to continue (y/n)?'
+      sel = gets.chomp
+    end until sel.downcase == 'n'
+  end
 
 end
 
 path = 'C:\Users\Nikita.Sidorov\Study\Optima\lab1\data.csv'
 obj = Stat.new(path, 2)
-puts obj.compute
+puts obj.handler
